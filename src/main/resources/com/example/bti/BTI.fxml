@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="MainPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="708.0" prefWidth="999.0" style="-fx-background-color: wite;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bti.Controller">
+    <AnchorPane fx:id="TopPanel" layoutY="-2.0" prefHeight="45.0" prefWidth="999.0" style="-fx-background-color: #fff;">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.41034480929374695" />
+                </color>
+            </DropShadow>
+        </effect>
+    </AnchorPane>
+    <AnchorPane fx:id="LeftPanel" layoutY="-3.0" prefHeight="712.0" prefWidth="234.0" style="-fx-background-color: #fff;">
+        <effect>
+            <DropShadow>
+                <color>
+                    <Color opacity="0.41034480929374695" />
+                </color>
+            </DropShadow>
+        </effect>
+        <Text fx:id="BTIname" layoutX="110.0" layoutY="49.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="БТИ" textAlignment="CENTER" wrappingWidth="106.40331649780273">
+            <font>
+                <Font name="Arial" size="33.0" />
+            </font>
+        </Text>
+        <Text fx:id="BTIname2" layoutX="112.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="БЮРО ТЕХНИЧЕСКОЙ ИНВЕНТАРИЗАЦИИ" textAlignment="CENTER" wrappingWidth="100.06915760040283">
+            <font>
+                <Font name="Arial" size="10.0" />
+            </font>
+        </Text>
+        <Line endX="100.0" layoutX="117.0" layoutY="114.0" startX="-100.0" />
+      <ImageView fx:id="logo" fitHeight="115.0" fitWidth="112.0" layoutX="-2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="SaveButton" layoutX="19.0" layoutY="162.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="198.0" text="Сохранить">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Text fx:id="ErrorText" fill="RED" layoutX="54.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Не все поля заполнены" textAlignment="CENTER" />
+      <Text fx:id="DoneText" fill="#00dd12" layoutX="52.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заявка добавлена в БД" />
+      <Button fx:id="CleanButton" layoutX="19.0" layoutY="206.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="198.0" text="Очистить">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Text fx:id="numReqText" layoutX="53.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="129.52148437499994" />
+    </AnchorPane>
+    <TextField fx:id="FIOzakInput" layoutX="614.0" layoutY="79.0" prefHeight="22.0" prefWidth="326.0" promptText="ФИО заказчика">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="PhoneInput" layoutX="614.0" layoutY="105.0" prefHeight="22.0" prefWidth="326.0" promptText="Телефон для связи с заказчиком">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="FizUrInput" layoutX="614.0" layoutY="131.0" prefHeight="22.0" prefWidth="326.0" promptText="Физическое или юридическое лицо">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="NumBankInput" layoutX="614.0" layoutY="184.0" prefHeight="22.0" prefWidth="326.0" promptText="Номер счета в банке">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="BankInput" layoutX="614.0" layoutY="157.0" prefHeight="22.0" prefWidth="326.0" promptText="Банк заказчика">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="AddressInput" layoutX="614.0" layoutY="210.0" prefHeight="22.0" prefWidth="326.0" promptText="Адрес объекта">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="DistrictInput" layoutX="614.0" layoutY="237.0" prefHeight="22.0" prefWidth="326.0" promptText="Район объекта">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="DocNameInput" layoutX="614.0" layoutY="289.0" prefHeight="22.0" prefWidth="326.0" promptText="Название документа">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="DateRequestInput1" alignment="CENTER" layoutX="614.0" layoutY="263.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="SrochnoeInput" layoutX="614.0" layoutY="315.0" prefHeight="22.0" prefWidth="326.0" promptText="Срочное изготовление (да/нет)">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="PriceDocInput" layoutX="614.0" layoutY="367.0" prefHeight="22.0" prefWidth="326.0" promptText="Стоимость изготовления документа">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="TimeTechInput" layoutX="614.0" layoutY="419.0" prefHeight="22.0" prefWidth="326.0" promptText="Время выхода техника">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="FIOnachInput" layoutX="614.0" layoutY="445.0" prefHeight="22.0" prefWidth="326.0" promptText="ФИО начальника отдела">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="FIOispInput" layoutX="614.0" layoutY="471.0" prefHeight="22.0" prefWidth="326.0" promptText="ФИО исполнителя">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="FIOTechInput" layoutX="614.0" layoutY="523.0" prefHeight="22.0" prefWidth="326.0" promptText="ФИО техника">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="PayInput" layoutX="614.0" layoutY="549.0" prefHeight="22.0" prefWidth="326.0" promptText="Оплата наличными (да/нет)">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="PaySumInput" layoutX="614.0" layoutY="601.0" prefHeight="22.0" prefWidth="326.0" promptText="Оплаченная сумма">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="DocIssuedInput" layoutX="614.0" layoutY="627.0" prefHeight="22.0" prefWidth="326.0" promptText="Документ выдан (да/нет)">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <TextField fx:id="PrimechanieInput" layoutX="614.0" layoutY="653.0" prefHeight="22.0" prefWidth="326.0" promptText="Примечания">
+        <font>
+            <Font size="10.0" />
+        </font>
+    </TextField>
+    <Label fx:id="FIOzakLabel" layoutX="300.0" layoutY="80.0" prefHeight="20.0" prefWidth="362.0" text="ФИО заказчика:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="PhoneLabel" layoutX="300.0" layoutY="106.0" prefHeight="20.0" prefWidth="362.0" text="Телефон для связи с заказчиком:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="FizUrLabel" layoutX="300.0" layoutY="134.0" prefHeight="20.0" prefWidth="362.0" text="Физическое или юридическое лицо:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="BankLabel" layoutX="300.0" layoutY="157.0" prefHeight="20.0" prefWidth="362.0" text="Банк заказчика:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="NumBankLabel" layoutX="300.0" layoutY="183.0" prefHeight="20.0" prefWidth="362.0" text="Номер счета в банке:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="AddressLabel" layoutX="300.0" layoutY="211.0" prefHeight="20.0" prefWidth="362.0" text="Адрес объекта:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="RegionLabel" layoutX="300.0" layoutY="237.0" prefHeight="20.0" prefWidth="362.0" text="Район объекта:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DateZaiavkiLabel" layoutX="300.0" layoutY="264.0" prefHeight="20.0" prefWidth="362.0" text="Дата приема заявки:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DocNameLabel" layoutX="300.0" layoutY="290.0" prefHeight="20.0" prefWidth="362.0" text="Название документа:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="SrochnoeLabel" layoutX="300.0" layoutY="317.0" prefHeight="20.0" prefWidth="362.0" text="Срочное изготовление (да/нет):">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DateVidachiLabel" layoutX="300.0" layoutY="342.0" prefHeight="20.0" prefWidth="362.0" text="Дата выдачи документа:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="PriceDocLabel" layoutX="300.0" layoutY="369.0" prefHeight="20.0" prefWidth="362.0" text="Стоимость изготовления документа:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DateTechLabel" layoutX="300.0" layoutY="395.0" prefHeight="20.0" prefWidth="362.0" text="Дата выхода техника:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="TimeTechLabel" layoutX="300.0" layoutY="420.0" prefHeight="20.0" prefWidth="362.0" text="Время выхода техника:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="FIOnachLabel" layoutX="300.0" layoutY="447.0" prefHeight="20.0" prefWidth="362.0" text="ФИО начальника отдела:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="FIOispLabel" layoutX="300.0" layoutY="473.0" prefHeight="20.0" prefWidth="362.0" text="ФИО исполнителя:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DatePeredachiLabel" layoutX="300.0" layoutY="498.0" prefHeight="20.0" prefWidth="362.0" text="Дата передачи исполнителю:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="FIOTechLabel" layoutX="300.0" layoutY="524.0" prefHeight="20.0" prefWidth="362.0" text="ФИО техника:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="PayLabel" layoutX="300.0" layoutY="551.0" prefHeight="20.0" prefWidth="362.0" text="Оплата наличными (да/нет):">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DatePayLabel" layoutX="300.0" layoutY="576.0" prefHeight="20.0" prefWidth="362.0" text="Дата оплаты:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="PaySumLabel" layoutX="300.0" layoutY="602.0" prefHeight="20.0" prefWidth="362.0" text="Оплаченная сумма:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="DocIssuedLabel" layoutX="300.0" layoutY="628.0" prefHeight="20.0" prefWidth="362.0" text="Документ выдан (да/нет):">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+    <Label fx:id="PrimechanieLabel" layoutX="300.0" layoutY="653.0" prefHeight="20.0" prefWidth="362.0" text="Примечания:">
+        <font>
+            <Font name="Arial" size="14.0" />
+        </font>
+    </Label>
+   <MenuButton fx:id="DistrictMenu" layoutX="944.0" layoutY="235.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <MenuButton fx:id="FizUrMenu" layoutX="944.0" layoutY="129.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="19.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <MenuButton fx:id="SrochnoeMenu" layoutX="944.0" layoutY="313.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <MenuButton fx:id="PayMenu" layoutX="944.0" layoutY="547.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <MenuButton fx:id="DocIssuedMenu" layoutX="944.0" layoutY="624.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <TextField fx:id="DateRequestInput2" alignment="CENTER" layoutX="723.0" layoutY="263.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateRequestInput3" alignment="CENTER" layoutX="832.0" layoutY="263.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateVidachiInput1" alignment="CENTER" layoutX="614.0" layoutY="341.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateVidachiInput2" alignment="CENTER" layoutX="723.0" layoutY="341.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateVidachiInput3" alignment="CENTER" layoutX="832.0" layoutY="341.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateTechInput1" alignment="CENTER" layoutX="614.0" layoutY="393.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateTechInput2" alignment="CENTER" layoutX="723.0" layoutY="393.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DateTechInput3" alignment="CENTER" layoutX="832.0" layoutY="393.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DatePeredachiInput1" alignment="CENTER" layoutX="614.0" layoutY="497.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DatePeredachiInput2" alignment="CENTER" layoutX="723.0" layoutY="497.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DatePeredachiInput3" alignment="CENTER" layoutX="832.0" layoutY="497.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DatePayInput1" alignment="CENTER" layoutX="614.0" layoutY="575.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DatePayInput2" alignment="CENTER" layoutX="723.0" layoutY="575.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <TextField fx:id="DatePayInput3" alignment="CENTER" layoutX="832.0" layoutY="575.0" prefHeight="22.0" prefWidth="108.0" promptText="ХХХХ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </TextField>
+   <MenuButton fx:id="FIOispMenu" layoutX="944.0" layoutY="469.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+   <MenuButton fx:id="FIOTechMenu" layoutX="944.0" layoutY="521.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="27.0" style="-fx-background-color: white;">
+      <effect>
+         <Glow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+   </MenuButton>
+</AnchorPane>
